@@ -90,6 +90,32 @@ using ExperimentWithControlsBlazor.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 58 "/Users/carlosj/Projects/ExperimentWithControlsBlazor/ExperimentWithControlsBlazor/Pages/Index.razor"
+ 
+    private string DisplayValue = "";
+
+    private void UpdateValue(ChangeEventArgs e)
+    {
+        DisplayValue = e.Value.ToString();
+    }
+
+    private void  UpdateNumericValue(ChangeEventArgs e)
+    {
+        if (int.TryParse(e.Value.ToString(), out int result))
+        {
+            DisplayValue = e.Value.ToString();
+        }
+    }
+
+    private void ButtonClick(string displayValue)
+    {
+        DisplayValue = displayValue;
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591
